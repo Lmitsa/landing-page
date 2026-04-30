@@ -28,7 +28,29 @@ const translations = {
         "features.f7_desc": "버튼 하나로 시야각을 제한하여 공공장소에서도 옆 사람의 시선으로부터 화면을 보호합니다.",
         "features.f8_title": "안티-탬퍼 기술",
         "features.f8_desc": "물리적 케이스 개방 감지 센서가 탑재되어 하드웨어 무단 조작 시 데이터를 즉시 잠금 처리합니다.",
-        "footer.copy": "© 2026 SHIELDBOOK PRO Inc. All rights reserved. 본 웹사이트는 보안 기술 시연을 위해 제작되었습니다."
+        "footer.copy": "© 2026 SHIELDBOOK PRO Inc. All rights reserved. 본 웹사이트는 보안 기술 시연을 위해 제작되었습니다.",
+        "security.title": "완벽한 데이터 철통 보안",
+        "security.desc": "단순한 소프트웨어 보안을 넘어, 하드웨어 레벨에서부터 시작되는 다층 방어 체계로 모든 위협으로부터 안전합니다.",
+        "security.s1_title": "커널 레벨 암호화",
+        "security.s1_desc": "OS 실행 전 단계부터 데이터 접근을 제어하여 루트킷 및 부트킷 공격을 원천 차단합니다.",
+        "security.s2_title": "실시간 위협 탐지 (AI)",
+        "security.s2_desc": "인공지능 기반의 행동 분석을 통해 미지의 랜섬웨어와 악성코드를 실시간으로 감지하고 격리합니다.",
+        "security.s3_title": "양자 내성 암호화",
+        "security.s3_desc": "미래의 양자 컴퓨터 공격에도 견딜 수 있는 차세대 암호화 알고리즘을 선제적으로 적용했습니다.",
+        "specs.title": "기술 사양",
+        "specs.subtitle": "보안과 성능, 그 어느 것도 타협하지 않았습니다.",
+        "specs.label_cpu": "프로세서",
+        "specs.val_cpu": "Intel® Core™ Ultra 9 / AMD Ryzen™ 9 8000 Series",
+        "specs.label_gpu": "그래픽",
+        "specs.val_gpu": "NVIDIA® GeForce RTX™ 4070 Laptop GPU (8GB GDDR6)",
+        "specs.label_ram": "메모리",
+        "specs.val_ram": "최대 64GB LPDDR5x 7467MHz",
+        "specs.label_storage": "저장장치",
+        "specs.val_storage": "최대 4TB PCIe Gen4 NVMe SSD (자가 암호화 드라이브)",
+        "specs.label_display": "디스플레이",
+        "specs.val_display": "16\" 4K+ OLED, 120Hz, 500 nits, 프라이버시 필터",
+        "specs.label_battery": "배터리/무게",
+        "specs.val_battery": "99.9Wh / 1.48kg (초경량 마그네슘 합금 바디)"
     },
     en: {
         "nav.home": "Home",
@@ -58,7 +80,29 @@ const translations = {
         "features.f7_desc": "Limits viewing angles at the touch of a button to protect your screen from onlookers even in public places.",
         "features.f8_title": "Anti-Tamper Technology",
         "features.f8_desc": "Equipped with physical case opening detection sensors to instantly lock data upon unauthorized hardware manipulation.",
-        "footer.copy": "© 2026 SHIELDBOOK PRO Inc. All rights reserved. This website is for security technology demonstration."
+        "footer.copy": "© 2026 SHIELDBOOK PRO Inc. All rights reserved. This website is for security technology demonstration.",
+        "security.title": "Ultimate Data Protection",
+        "security.desc": "Go beyond simple software security with a multi-layered defense system that starts at the hardware level.",
+        "security.s1_title": "Kernel-Level Encryption",
+        "security.s1_desc": "Prevents rootkit and bootkit attacks by controlling data access from before the OS runs.",
+        "security.s2_title": "Real-time Threat Detection (AI)",
+        "security.s2_desc": "Detects and isolates unknown ransomware and malware in real-time through AI-based behavioral analysis.",
+        "security.s3_title": "Quantum-Resistant Crypto",
+        "security.s3_desc": "Pre-emptively applied next-gen encryption algorithms that can withstand future quantum computer attacks.",
+        "specs.title": "Technical Specifications",
+        "specs.subtitle": "No compromise between security and performance.",
+        "specs.label_cpu": "Processor",
+        "specs.val_cpu": "Intel® Core™ Ultra 9 / AMD Ryzen™ 9 8000 Series",
+        "specs.label_gpu": "Graphics",
+        "specs.val_gpu": "NVIDIA® GeForce RTX™ 4070 Laptop GPU (8GB GDDR6)",
+        "specs.label_ram": "Memory",
+        "specs.val_ram": "Up to 64GB LPDDR5x 7467MHz",
+        "specs.label_storage": "Storage",
+        "specs.val_storage": "Up to 4TB PCIe Gen4 NVMe SSD (Self-Encrypting Drive)",
+        "specs.label_display": "Display",
+        "specs.val_display": "16\" 4K+ OLED, 120Hz, 500 nits, Privacy Filter",
+        "specs.label_battery": "Battery/Weight",
+        "specs.val_battery": "99.9Wh / 1.48kg (Ultra-light Magnesium Alloy Body)"
     }
 };
 
@@ -163,6 +207,12 @@ cards.forEach((card, index) => {
     card.style.transitionDelay = `${index * 0.1}s`;
 });
 
+// Staggered reveal for spec items
+const specItems = document.querySelectorAll('.spec-item');
+specItems.forEach((item, index) => {
+    item.style.transitionDelay = `${index * 0.1}s`;
+});
+
 // Smooth Scroll for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -190,3 +240,42 @@ hero.addEventListener('mousemove', (e) => {
     const heroBg = document.querySelector('.hero-bg');
     heroBg.style.transform = `translate(${xPos}px, ${yPos}px)`;
 });
+
+// Laptop Lid Scroll Animation Logic
+const laptopTrigger = document.getElementById('laptop-trigger');
+const laptopLid = document.querySelector('.laptop-lid');
+const laptopImg = laptopLid?.querySelector('img');
+const laptopGlow = laptopLid?.querySelector('.screen-glow');
+
+function updateLaptopScroll() {
+    if (!laptopTrigger || !laptopLid) return;
+    
+    const rect = laptopTrigger.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    
+    // Start opening only when laptop reaches the upper middle (40% from top)
+    // to ensure it stays closed at the start of the page.
+    // Opens very quickly (within 15% of screen height)
+    const startOffset = windowHeight * 0.4;
+    const endOffset = windowHeight * 0.25;
+    
+    let progress = (startOffset - rect.top) / (startOffset - endOffset);
+    progress = Math.max(0, Math.min(1, progress));
+    
+    // Calculate rotation from -95deg to 0deg
+    const rotation = -95 + (progress * 95);
+    laptopLid.style.transform = `rotateX(${rotation}deg)`;
+    
+    // Sync opacity and brightness
+    if (laptopImg) {
+        laptopImg.style.opacity = progress;
+        laptopImg.style.filter = `brightness(${progress})`;
+    }
+    if (laptopGlow) {
+        laptopGlow.style.opacity = progress;
+    }
+}
+
+window.addEventListener('scroll', updateLaptopScroll);
+window.addEventListener('resize', updateLaptopScroll);
+updateLaptopScroll(); // Initial call

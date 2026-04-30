@@ -45,9 +45,7 @@
         <div class="hero-content">
             <h1 class="reveal"><span class="gradient-text" data-i18n="hero.title_top">보안의 한계를 넘다</span><br><span data-i18n="hero.title_bottom">SHIELDBOOK PRO</span></h1>
             <p class="reveal" data-i18n="hero.subtitle">군사 등급의 하드웨어 암호화와 생체 인식 기술로<br>당신의 소중한 데이터를 완벽하게 보호합니다.</p>
-            <div class="reveal">
-                <a href="#features" class="btn-primary" data-i18n="hero.cta">제품 상세 보기</a>
-            </div>
+            <!-- Removed CTA button per user request -->
         </div>
         <div class="hero-visual reveal" id="laptop-trigger">
             <div class="laptop-container">
@@ -106,6 +104,82 @@
                 <i data-lucide="cpu"></i>
                 <h3 data-i18n="features.f8_title">안티-탬퍼 기술</h3>
                 <p data-i18n="features.f8_desc">물리적 케이스 개방 감지 센서가 탑재되어 하드웨어 무단 조작 시 데이터를 즉시 잠금 처리합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Technology Section -->
+    <section class="security" id="security">
+        <div class="security-container">
+            <div class="security-visual reveal">
+                <div class="visual-glow"></div>
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000" alt="Security Technology">
+                <div class="data-nodes">
+                    <div class="node n1"></div>
+                    <div class="node n2"></div>
+                    <div class="node n3"></div>
+                </div>
+            </div>
+            <div class="security-info reveal">
+                <h2 data-i18n="security.title">완벽한 데이터 철통 보안</h2>
+                <p data-i18n="security.desc">단순한 소프트웨어 보안을 넘어, 하드웨어 레벨에서부터 시작되는 다층 방어 체계로 모든 위협으로부터 안전합니다.</p>
+                <ul class="security-list">
+                    <li>
+                        <i data-lucide="shield-check"></i>
+                        <div>
+                            <strong data-i18n="security.s1_title">커널 레벨 암호화</strong>
+                            <p data-i18n="security.s1_desc">OS 실행 전 단계부터 데이터 접근을 제어하여 루트킷 및 부트킷 공격을 원천 차단합니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i data-lucide="activity"></i>
+                        <div>
+                            <strong data-i18n="security.s2_title">실시간 위협 탐지 (AI)</strong>
+                            <p data-i18n="security.s2_desc">인공지능 기반의 행동 분석을 통해 미지의 랜섬웨어와 악성코드를 실시간으로 감지하고 격리합니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i data-lucide="key"></i>
+                        <div>
+                            <strong data-i18n="security.s3_title">양자 내성 암호화</strong>
+                            <p data-i18n="security.s3_desc">미래의 양자 컴퓨터 공격에도 견딜 수 있는 차세대 암호화 알고리즘을 선제적으로 적용했습니다.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications Section -->
+    <section class="specs" id="specs">
+        <div class="section-header reveal">
+            <h2 data-i18n="specs.title">기술 사양</h2>
+            <p data-i18n="specs.subtitle">보안과 성능, 그 어느 것도 타협하지 않았습니다.</p>
+        </div>
+        <div class="specs-grid reveal">
+            <div class="spec-item">
+                <span class="spec-label" data-i18n="specs.label_cpu">프로세서</span>
+                <span class="spec-value" data-i18n="specs.val_cpu">Intel® Core™ Ultra 9 / AMD Ryzen™ 9 8000 Series</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label" data-i18n="specs.label_gpu">그래픽</span>
+                <span class="spec-value" data-i18n="specs.val_gpu">NVIDIA® GeForce RTX™ 4070 Laptop GPU (8GB GDDR6)</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label" data-i18n="specs.label_ram">메모리</span>
+                <span class="spec-value" data-i18n="specs.val_ram">Up to 64GB LPDDR5x 7467MHz</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label" data-i18n="specs.label_storage">저장장치</span>
+                <span class="spec-value" data-i18n="specs.val_storage">Up to 4TB PCIe Gen4 NVMe SSD (Self-Encrypting Drive)</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label" data-i18n="specs.label_display">디스플레이</span>
+                <span class="spec-value" data-i18n="specs.val_display">16" 4K+ (3840 x 2400) OLED, 120Hz, 500 nits, Privacy Filter</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label" data-i18n="specs.label_battery">배터리/무게</span>
+                <span class="spec-value" data-i18n="specs.val_battery">99.9Wh / 1.48kg (초경량 마그네슘 합금 바디)</span>
             </div>
         </div>
     </section>
