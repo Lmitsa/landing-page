@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHIELDBOOK PRO | 차세대 보안 특화 노트북</title>
+    <meta name="description" content="당신의 비즈니스와 개인정보를 완벽하게 보호하는 차세대 보안 특화 노트북 SHIELDBOOK PRO">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Page Load Overlay -->
+    <div id="loader" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 9999; transition: opacity 1.5s ease-in-out; pointer-events: none;"></div>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <a href="#" class="logo">
+            <i data-lucide="shield-check"></i>
+            SHIELDBOOK PRO
+        </a>
+        <div class="nav-links">
+            <a href="#hero">홈</a>
+            <a href="#features">특장점</a>
+            <a href="#security">보안 기술</a>
+            <a href="#specs">사양</a>
+        </div>
+        <a href="#" class="btn-primary">지금 구매하기</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-image-bg"></div>
+        <div class="hero-content">
+            <h1 class="reveal"><span class="gradient-text">보안의 한계를 넘다</span><br>SHIELDBOOK PRO</h1>
+            <p class="reveal">군사 등급의 하드웨어 암호화와 생체 인식 기술로<br>당신의 소중한 데이터를 완벽하게 보호합니다.</p>
+            <div class="reveal">
+                <a href="#features" class="btn-primary">제품 상세 보기</a>
+            </div>
+        </div>
+        <div class="hero-visual reveal" id="laptop-trigger">
+            <div class="laptop-container">
+                <div class="laptop-lid">
+                    <img src="https://images.unsplash.com/photo-1611078489935-0cb964de46d6?auto=format&fit=crop&q=80&w=1000" alt="SHIELDBOOK PRO Screen">
+                    <div class="screen-glow"></div>
+                </div>
+                <div class="laptop-base"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-header reveal">
+            <h2>지능형 보안 시스템</h2>
+            <p>단순한 비밀번호 그 이상의 보안을 경험하세요.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card reveal">
+                <i data-lucide="fingerprint"></i>
+                <h3>초정밀 생체 인식</h3>
+                <p>0.1초 내에 인식되는 정밀 지문 센서와 IR 카메라를 통한 안면 인식으로 빠르고 안전하게 로그인하세요.</p>
+            </div>
+            <div class="feature-card reveal">
+                <i data-lucide="lock"></i>
+                <h3>하드웨어 암호화</h3>
+                <p>독립적인 TPM 2.0 칩셋이 탑재되어 모든 데이터를 실시간으로 암호화하며 외부의 물리적 공격으로부터 보호합니다.</p>
+            </div>
+            <div class="feature-card reveal">
+                <i data-lucide="eye-off"></i>
+                <h3>물리적 카메라 셔터</h3>
+                <p>해킹으로 인한 카메라 활성화를 원천 차단하는 슬라이딩 방식의 물리 셔터로 사생활을 완벽히 보호합니다.</p>
+            </div>
+            <div class="feature-card reveal">
+                <i data-lucide="wifi-off"></i>
+                <h3>데이터 가드 모드</h3>
+                <p>공용 Wi-Fi 연결 시 자동으로 트래픽을 필터링하고 의심스러운 패킷을 차단하는 전용 보안 솔루션을 제공합니다.</p>
+            </div>
+            <div class="feature-card reveal">
+                <i data-lucide="shield-alert"></i>
+                <h3>자가 복구 BIOS</h3>
+                <p>펌웨어 공격 감지 시 이전의 안전한 상태로 자동 복구되는 자가 치유 기술이 탑재되어 있습니다.</p>
+            </div>
+            <div class="feature-card reveal">
+                <i data-lucide="zap"></i>
+                <h3>고성능 퍼포먼스</h3>
+                <p>강력한 보안 속에서도 타협 없는 성능을 위해 최신 프로세서와 대용량 메모리를 탑재했습니다.</p>
+            </div>
+            <div class="feature-card reveal">
+                <i data-lucide="scan"></i>
+                <h3>내장형 프라이버시 필터</h3>
+                <p>버튼 하나로 시야각을 제한하여 공공장소에서도 옆 사람의 시선으로부터 화면을 보호합니다.</p>
+            </div>
+            <div class="feature-card reveal">
+                <i data-lucide="cpu"></i>
+                <h3>안티-탬퍼 기술</h3>
+                <p>물리적 케이스 개방 감지 센서가 탑재되어 하드웨어 무단 조작 시 데이터를 즉시 잠금 처리합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <i data-lucide="shield-check"></i>
+            SHIELDBOOK PRO
+        </div>
+        <p class="footer-text">© 2026 SHIELDBOOK PRO Inc. All rights reserved. 본 웹사이트는 보안 기술 시연을 위해 제작되었습니다.</p>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
