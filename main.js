@@ -246,6 +246,7 @@ const laptopTrigger = document.getElementById('laptop-trigger');
 const laptopLid = document.querySelector('.laptop-lid');
 const laptopImg = laptopLid?.querySelector('img');
 const laptopGlow = laptopLid?.querySelector('.screen-glow');
+const networkAnim = document.getElementById('network-animation');
 
 function updateLaptopScroll() {
     if (!laptopTrigger || !laptopLid) return;
@@ -273,6 +274,13 @@ function updateLaptopScroll() {
     }
     if (laptopGlow) {
         laptopGlow.style.opacity = progress;
+    }
+
+    // Network animation visibility - appears when laptop is > 70% open
+    if (networkAnim) {
+        const networkProgress = Math.max(0, (progress - 0.7) / 0.3);
+        networkAnim.style.opacity = networkProgress;
+        networkAnim.style.transform = `translate(-50%, -50%) scale(${0.8 + (networkProgress * 0.2)})`;
     }
 }
 
